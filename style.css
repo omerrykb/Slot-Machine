@@ -1,0 +1,458 @@
+body {
+    background: radial-gradient(circle, rgb(8, 0, 16), rgb(71, 0, 71) 400%);
+    color: rgb(49, 74, 144);
+    font-family: 'Noto Sans', sans-serif;
+    height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent {
+    margin: auto;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.titleDiv,
+.inputDiv,
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.titleDiv {
+    align-items: center;
+}
+
+#h1-left {
+    text-align: start;
+    font-size: 20px;
+    width: 40%;
+    background: linear-gradient(to left, rgb(54, 54, 54), gray);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#h1-right {
+    text-align: end;
+    font-size: 20px;
+    width: 40%;
+    background: linear-gradient(to right, rgb(54, 54, 54), gray);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#tahminInput,
+#bahisMiktariInput {
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    width: 40%;
+    height: 7vh;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Noto Sans', sans-serif;
+    transition: all .5s linear;
+    cursor: text;
+    box-shadow: 0 25px 23px rgba(0, 0, 0, 0.25);
+}
+
+#tahminInput::placeholder,
+#bahisMiktariInput::placeholder {
+    text-align: center;
+}
+
+#tahminInput:focus,
+#bahisMiktariInput:focus {
+    text-align: center;
+    caret-color: #17ff00;
+    opacity: 1;
+    border: 1px dashed greenyellow;
+}
+
+#tahminInput:hover,
+#bahisMiktariInput:hover {
+    opacity: .8;
+    border: 1px solid greenyellow;
+}
+
+#LotoDivParent {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    text-align: center;
+    height: 25vh;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.number {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    text-shadow: 5.5px 0px 4px rgb(34, 34, 34);
+}
+
+.content {
+    height: 35vh;
+    display: flex;
+    align-items: start;
+}
+
+.sonucDiv {
+    width: 80%;
+    height: 100%;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #a000bc rgb(71, 0, 71);
+}
+
+.sonucDiv::-webkit-scrollbar-thumb {
+    background-color: #a000bc;
+    border-radius: 1rem;
+}
+
+.sonucDiv::-webkit-scrollbar-track {
+    background-color: rgb(71, 0, 71);
+}
+
+.sonucDiv::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+
+
+.sonucDiv p {
+    padding: 0 0 1rem 0;
+    position: relative;
+    animation: zoom 1s linear forwards;
+}
+
+#startBtn {
+    width: 15%;
+    height: 7vh;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    transition: all .5s;
+    font-size: 19px;
+    letter-spacing: -2px;
+    box-shadow: 0 25px 23px rgba(0, 0, 0, 0.055);
+    cursor: pointer;
+}
+
+#startBtn:hover {
+    opacity: .8;
+    border: 1.5px solid rgba(172, 255, 47, 0.745);
+    animation: btn-1st linear 1s infinite;
+    color: black;
+
+}
+
+hr {
+    position: absolute;
+    margin: 1rem 0 0 0;
+    color: rgb(71, 0, 71);
+    position: relative;
+}
+
+.hrDiv {
+    position: absolute;
+    border: 1px solid green;
+    animation: hrAnimation 1.5s linear forwards;
+    background-color: green;
+    border-radius: 100%;
+    bottom: 10px;
+    width: 15px;
+    height: 15px;
+}
+
+#hrDivError {
+    position: absolute;
+    animation: hrAnimationError 1.5s linear forwards;
+    border: 1px solid red;
+    background-color: red;
+    border-radius: 100%;
+    bottom: 10px;
+    width: 15px;
+    height: 15px;
+}
+
+/* hr animation */
+@keyframes hrAnimation {
+
+    0%,
+    100% {
+        transform: translateX(0%);
+    }
+
+    50% {
+        transform: translateX(3500%);
+    }
+}
+
+@keyframes hrAnimationError {
+
+    0%,
+    100% {
+        transform: translateX(0%);
+    }
+
+    50% {
+        transform: translateX(3500%);
+    }
+}
+
+@keyframes zoom {
+
+    0%,
+    100% {
+        font-size: inherit;
+    }
+
+    50% {
+        font-size: 15px;
+    }
+}
+
+/* Button Animation */
+
+
+#btnAnmtd-1 {
+    animation: btn-1st linear 1s infinite;
+}
+
+#btnAnmtd-2 {
+    animation: btn-2nd linear 1s infinite;
+}
+
+#btnAnmtd-3 {
+    animation: btn-3rd linear 1s infinite;
+}
+
+#btnAnmtd-4 {
+    animation: btn-4th linear 1s infinite;
+}
+
+#btnAnmtd-5 {
+    animation: btn-5th linear 1s infinite;
+}
+
+/*! 1 */
+@keyframes btn-1st {
+
+    0%,
+    100% {
+        color: rgb(49, 0, 0);
+    }
+
+    20% {
+        color: rgb(0, 45, 55);
+    }
+
+    40% {
+        color: rgb(86, 0, 46);
+    }
+
+    60% {
+        color: rgb(78, 43, 0);
+    }
+
+    80% {
+        color: rgb(48, 48, 48);
+    }
+}
+
+/*! 2 */
+@keyframes btn-2nd {
+
+    0%,
+    100% {
+        color: rgb(48, 48, 48);
+    }
+
+    20% {
+        color: rgb(49, 0, 0);
+    }
+
+    40% {
+        color: rgb(0, 45, 55);
+    }
+
+    60% {
+        color: rgb(86, 0, 46);
+    }
+
+    80% {
+        color: rgb(78, 43, 0);
+    }
+}
+
+/*! 3 */
+@keyframes btn-3rd {
+
+    0%,
+    100% {
+        color: rgb(78, 43, 0);
+    }
+
+    20% {
+        color: rgb(48, 48, 48);
+    }
+
+    40% {
+        color: rgb(49, 0, 0);
+    }
+
+    60% {
+        color: rgb(0, 45, 55);
+    }
+
+    80% {
+        color: rgb(86, 0, 46);
+    }
+}
+
+/*! 4 */
+@keyframes btn-4th {
+
+    0%,
+    100% {
+        color: rgb(86, 0, 46);
+    }
+
+    20% {
+        color: rgb(78, 43, 0);
+    }
+
+    40% {
+        color: rgb(48, 48, 48);
+    }
+
+    60% {
+        color: rgb(49, 0, 0);
+    }
+
+    80% {
+        color: rgb(0, 45, 55);
+    }
+}
+
+/*! 5 */
+@keyframes btn-5th {
+
+    0%,
+    100% {
+        color: rgb(0, 45, 55);
+    }
+
+    20% {
+        color: rgb(86, 0, 46);
+    }
+
+    40% {
+        color: rgb(78, 43, 0);
+    }
+
+    60% {
+        color: rgb(48, 48, 48);
+    }
+
+    80% {
+        color: rgb(49, 0, 0);
+    }
+}
+
+@keyframes ErrorBorder {
+
+    0%,
+    100% {
+        border: 3px solid red;
+    }
+
+    50% {
+        border: 1px dashed red;
+    }
+
+}
+
+@keyframes PlaceholderAnimation {
+
+    0%,
+    100% {
+        font-size: 30px;
+    }
+
+    50% {
+        font-size: inherit;
+    }
+}
+
+/* mediaScreen */
+
+@media screen and (max-width:670px) {
+    @keyframes hrAnimation {
+
+        0%,
+        100% {
+            transform: translateX(0%);
+        }
+
+        50% {
+            transform: translateX(2000%);
+        }
+    }
+
+    @keyframes hrAnimationError {
+
+        0%,
+        100% {
+            transform: translateX(0%);
+        }
+
+        50% {
+            transform: translateX(2000%);
+        }
+    }
+}
+
+@media screen and (max-width:570px) {
+    #startBtn {
+        width: 100%;
+        display: block;
+        position: absolute;
+        height: 20%;
+    }
+
+    .content {
+        position: relative;
+    }
+
+    .sonucDiv {
+        margin: 4rem 0 0 0;
+        position: absolute;
+        width: 100%;
+        display: block;
+        height: 75%;
+    }
+}
+
+@media screen and (max-width:450px) {
+
+    h1,
+    p {
+        font-size: 12px !important;
+    }
+}

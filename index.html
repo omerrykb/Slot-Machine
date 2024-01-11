@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slot Machine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="parent">
+        <div class="parent2">
+            <div class="titleDiv">
+                <h1 id="h1-left">Lütfen örnekteki gibi 3 adet rakam giriniz. (0-9)</h1>
+                <h1 id="h1-right">Lütfen bahis miktarı giriniz.</h1>
+            </div>
+            <div class="inputDiv">
+                <input type="text" id="tahminInput" placeholder="0 0 0">
+                <input type="text" id="bahisMiktariInput" placeholder="₺">
+            </div>
+            <div id="LotoDivParent">
+                <div class="number number-1">0</div>
+                <div class="number number-2">0</div>
+                <div class="number number-3">0</div>
+            </div>
+            <div class="content">
+                <div class="sonucDiv"></div>
+                <button id="startBtn">
+                    <span id="btnAnmtd-1" class="spanClass">S</span>
+                    <span id="btnAnmtd-2" class="spanClass">t</span>
+                    <span id="btnAnmtd-3" class="spanClass">a</span>
+                    <span id="btnAnmtd-4" class="spanClass">r</span>
+                    <span id="btnAnmtd-5" class="spanClass">t</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
